@@ -3,7 +3,7 @@ import sys
 from dvclive import Live
 
 with Live(save_dvc_exp=True) as live:
-    epochs =40
+    epochs =50
     live.log_param("epochs", epochs)
     for epoch in range(epochs):
         live.log_metric("train/accuracy", epoch + random.random())
